@@ -1,0 +1,26 @@
+{
+  "name": "Venture-4th",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.1.2",
+    "grunt-contrib-uglify": "~0.1.1",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-watch": "~0.2.0",
+    "grunt-contrib-sass": "~0.8"
+  },
+  "description": "Travel App Prototype for Amadeus Hack",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Twerkathon/front_end_client_server.git"
+  },
+  "keywords": [
+    "travel",
+    "fun",
+    "adventure",
+    "mobile",
+    "hack"
+  ],
+  "author": "Sherrie Gonzalez",
+  "homepage": "https://github.com/Twerkathon/front_end_client_server"
+}
