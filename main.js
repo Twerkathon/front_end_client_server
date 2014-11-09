@@ -11,6 +11,7 @@ $(document).ready(function () {
 		$('#formSubmit').click(){
 			var e = document.getElementById('temperature');
 			var strUser = e.options[selectedIndex].text;
+			console.log(strUser);
 			if (strUser == 'warm'){
 				return ["MAD"];
 			}
