@@ -6,26 +6,7 @@ $(document).ready(function () {
 
 	var getDestination = function(){
 		// array of 
-		var madrid = ["MAD"];
-		var london = ["LHR"];
-		// SHERRIE
-		var dest = $('#formSubmit').click(function(){
-			var strUser = $('#temperature').find(":selected").text();
-			// console.log(strUser);
-			if (strUser == 'Warm'){
-				// console.log("woo");
-				var dest = "MAD";
-				// console.log(dest);
-			}
-			else if (strUser == 'Cold'){
-				var dest =  "LHR";
-
-			}
-			
-
-		});
-		console.log(dest);
-		return dest;
+		return ["MAD"];
 
 		// return dest;
 		// console.log(dest);
