@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+	var startDate = $("#startDate").val();
+	var endDate = $("#endDate").val();
+	console.log(endDate);
+
 	var getOrigin = function(){
 		return "BOS";
 	}
@@ -127,6 +131,15 @@ $(document).ready(function () {
 				json.cost = data.results[1]["cars"][1]["estimated_total"]["amount"];
 				json.departureDate = getDepartureDateCar("2015-09-10")
 				json.returnDate = "2015-10-18"
+
+				var dep = new Date(json.departureDate);
+				var d = dep.toLocaleDateString();
+				console.log(d);
+
+				var ret = new Date(json.returnDate);
+				var r = ret.toLocaleDateString();
+				console.log(r);
+
 
 				var carCost = data.results[1]["cars"][1]["estimated_total"]["amount"];
 				$("#carCost").html(carCost);
