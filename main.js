@@ -22,7 +22,46 @@ $(document).ready(function () {
 		var last = new Date(depDate);
 		first.setDate(first.getDate()-3);
 		last.setDate(last.getDate()+3)
-		return first.ToString("yyyy-mm-dd") + "--" + last.ToString("yyyy-mm-dd"); 
+		var fyyyy = first.getFullYear().toString();
+		var fmm = first.getMonth().toString();
+		var fdd  = first.getDate().toString();
+		var lyyyy = last.getFullYear().toString();
+		var lmm = last.getMonth().toString();
+		var ldd  = last.getDate().toString();
+
+
+		var fmmChars = fmm.split('');
+		var fddChars = fdd.split('');
+		var lmmChars = lmm.split('');
+		var lddChars = ldd.split('');
+
+		// CONCAT THE STRINGS IN YYYY-MM-DD FORMAT
+		var datestring = fyyyy + '-' + (fmmChars[1]?fmm:"0"+fmmChars[0]) + '-' + (fddChars[1]?fdd:"0"+fddChars[0]) + '--' + lyyyy + '-' + (lmmChars[1]?lmm:"0"+lmmChars[0]) + '-' + (lddChars[1]?ldd:"0"+lddChars[0]);
+		// if (fmm.length < 2){
+		// 	console.log(fmm);
+		// 	fmm = '0' + fmm;
+		// 	// var date= fyyyy + '-0' + fmm + '-' + fdd + "--" + lyyyy + '-' + lmm + '-' + ldd; 
+		// } 
+		// if ( fdd.length < 2 ){
+		// 	console.log(fdd);
+		// 	fdd = '0' + fdd;
+
+		// }	
+		// if (lmm.length < 2 ){
+		// 	console.log(lmm);
+		// 	lmm = '0' + lmm;
+		// }
+		
+		// if (ldd.length < 2) {
+		// 	console.log(ldd);
+		// 	ldd = '0' + ldd;
+		// }
+		// // } else{
+		// // 	// var date= fyyyy + '-' + fmm + '-' + fdd + "--" + lyyyy + '-' + lmm + '-' + ldd; 
+		// // };
+
+		// var date= fyyyy + '-' + fmm + '-' + fdd + "--" + lyyyy + '-' + lmm + '-' + ldd; 
+		return datestring;
 		// flexible or not
 	}
 
