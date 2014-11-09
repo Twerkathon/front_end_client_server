@@ -1,4 +1,4 @@
 /*!  - v1.0.0
  * https://github.com/Twerkathon/front_end_client_server
  * Copyright (c) 2014; * Licensed GPLv2+ */
-jQuery(document).ready(function(){});
+jQuery(document).ready(function(t){t("section").hide(),t(".current").show(),t(".nextButton").click(function(){t(".current").removeClass("current").hide().next().fadeIn().addClass("current"),t(".current").hasClass("last")&&t(".nextButton").attr("disabled",!0),t("backButton").attr("disabled",null)}),t(".backButton").click(function(){t(".current").removeClass("current").hide().prev().fadeIn().addClass("current"),t(".current").hasClass("first")&&t(".backButton").attr("disabled",!0),t(".nextButton").attr("disabled",null)})});
