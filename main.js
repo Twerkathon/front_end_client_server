@@ -6,22 +6,29 @@ $(document).ready(function () {
 
 	var getDestination = function(){
 		// array of 
-		
+		var madrid = ["MAD"];
+		var london = ["LHR"];
 		// SHERRIE
 		var dest = $('#formSubmit').click(function(){
-			var e = document.getElementById('temperature');
-			var strUser = e.options[selectedIndex].text;
-			console.log(strUser);
-			if (strUser == 'warm'){
-				var dest = ["MAD"];
+			var strUser = $('#temperature').find(":selected").text();
+			// console.log(strUser);
+			if (strUser == 'Warm'){
+				// console.log("woo");
+				var dest = "MAD";
+				// console.log(dest);
 			}
-			else if (strUser == 'cold'){
-				var dest = ["LHR"];
-			}
-			return dest;
-		});
+			else if (strUser == 'Cold'){
+				var dest =  "LHR";
 
+			}
+			
+
+		});
+		console.log(dest);
 		return dest;
+
+		// return dest;
+		// console.log(dest);
 
 	}
 
@@ -75,16 +82,16 @@ $(document).ready(function () {
 	var city_names = {"LHR":"London, UK","MAD":"Madrid, ES"};
 	var recommendations = new Array();
 
-	console.log("http://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?origin=" + getOrigin() + "&destination=" + getDestination()[0] + "&departure_date=" + getDepartureDateFlight("2015-09-10") + "&duration=1--30&max_price=" + getMaxPrice() + "&apikey=nRLZ1a7XwQyUiepJflPOx1djGdUo9bGf")
+	// console.log("http://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?origin=" + getOrigin() + "&destination=" + getDestination()[0] + "&departure_date=" + getDepartureDateFlight("2015-09-10") + "&duration=1--30&max_price=" + getMaxPrice() + "&apikey=nRLZ1a7XwQyUiepJflPOx1djGdUo9bGf")
 
 	// loop through the different destinations
 	for (var i = 0; i < getDestination().length; i++) {
-		console.log(getDestination()[i]);
+		// console.log(getDestination()[i]);
 		flights = $.ajax({
 			url: "http://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?origin=" + getOrigin() + "&destination=" + getDestination()[i] + "&departure_date=" + getDepartureDateFlight("2015-09-10") + "&duration=1--30&max_price=" + getMaxPrice() + "&apikey=nRLZ1a7XwQyUiepJflPOx1djGdUo9bGf",
 			dataType: 'json',
 			}).done(function( data ){
-				console.log(data.results);
+				// console.log(data.results);
 			// for (var i = 0; i < 3; i++) { //3 options for each destination, max.
 				var json = {};
 				if (getDestination()[i] == "LHR"){
@@ -100,7 +107,7 @@ $(document).ready(function () {
 				json.cost = data.results[0]["price"];
 				json.departureDate = data.results[0]["departure_date"];
 				json.returnDate = data.results[0]["return_date"];
-				console.log(json);
+				// console.log(json);
 				return json;
 		
 				// console.log(json);
@@ -128,7 +135,7 @@ $(document).ready(function () {
 				json.cost = data.results[1]["cars"][1]["estimated_total"]["amount"];
 				json.departureDate = getDepartureDateCar("2015-09-10")
 				json.returnDate = "2015-10-18"
-				console.log(json);
+				// console.log(json);
 				return json
 			// };
 		});
