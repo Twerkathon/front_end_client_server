@@ -24,6 +24,8 @@ $helvetica: Helvetica, san-serif;
 
 $green: #283d3e;
 
+$red: #d62d2e;
+
 body {
 	width: 100%;
 	background: #e7e8e9;
@@ -52,6 +54,7 @@ body {
 	h2 {
 		font: 400 40px/4em $tenso;
 		color: #464646;
+		text-transform: uppercase;
 	}
 
 	h2.white {
@@ -147,6 +150,7 @@ body {
 		width: 174px;
 		height: 75px;
 		background: url('../../images/nextButton.png') center no-repeat;
+		margin: 0 auto;
 	}
 
 	form {
@@ -204,10 +208,11 @@ body {
 	#third {
 
 		position: relative;
+		padding-bottom: 120px;
 
 		.nextStyles {
 			position: absolute;
-			bottom: 0;
+			bottom: 20px;
 		}
 
 		.placeOptions {
@@ -260,6 +265,91 @@ body {
 					padding: 5px 0;
 					border-bottom-left-radius: 10px;
 					border-bottom-right-radius: 10px;
+				}
+
+				.cardButtons {
+					width: 330px;
+					position: absolute;
+					top: 575px;
+					left: 75px;
+
+					a {
+						height: 34px;
+						width: 50%;
+						float: left;
+						display: inline-block;
+						font: 400 26px $tenso;
+						color: #fff;
+						text-transform: uppercase;
+						text-decoration: none;
+						text-align: center;
+						padding: 5px 0;
+
+						&.green {
+							background: $green;
+						}
+
+						&.red {
+							background: $red;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#fourth {
+
+		.price {
+			width: 135px;
+			height: 120px;
+			float: left;
+			text-align: center;
+			margin-right: 10px;
+		}
+
+		.packageOptions {
+
+			li {
+				height: 120px;
+				padding: 20px 5px 0 5px;
+
+				p.description {
+					width: 250px;
+					font: 400 20px/23px Helvetica, san-serif;
+					display: block;
+					float: left;
+				}
+			}
+
+			li:nth-child(odd) {
+				background: #ffffff;
+			}
+		}
+
+		.cardButtons {
+			width: 160px;
+			display: block;
+			float: right;
+
+			a {
+				height: 34px;
+				width: 100%;
+				display: block;
+				font: 400 26px $tenso;
+				text-align: center;
+				padding: 5px 0;
+				clear: both;
+				color: #fff;
+				text-transform: uppercase;
+				text-decoration: none;
+
+				&.green {
+					background: $green;
+				}
+
+				&.red {
+					background: $red;
 				}
 			}
 		}
@@ -367,4 +457,8 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+.clear {
+	clear: both;
 }
