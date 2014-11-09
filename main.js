@@ -6,19 +6,19 @@ $(document).ready(function () {
 
 	var getDestination = function(){
 		// array of 
-		var dest = '';
+		
 		// SHERRIE
-		$('#formSubmit').click(function(){
+		var dest = $('#formSubmit').click(function(){
 			var e = document.getElementById('temperature');
 			var strUser = e.options[selectedIndex].text;
 			console.log(strUser);
 			if (strUser == 'warm'){
-				dest = ["MAD"];
+				var dest = ["MAD"];
 			}
 			else if (strUser == 'cold'){
-				dest = ["LHR"];
+				var dest = ["LHR"];
 			}
-
+			return dest;
 		});
 
 		return dest;
