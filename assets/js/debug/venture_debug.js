@@ -26,4 +26,14 @@ jQuery(document).ready(function($) {
 	    }
 	    $('.nextButton').attr('disabled', null);
 	});
+
+	$('.toggleCheck').click(function() {
+		var toggleClass = $(this).attr('id');
+		$('.' + toggleClass + '-options').slideToggle();
+	});
+
+	$('.placeOptions li').click(function() {
+	    $('.placeOptions li').removeClass('selected');
+	    $(this).addClass('selected');
+	});
 });

@@ -121,6 +121,10 @@ body {
 		font-size: 60px;
 	}
 
+	.music-options, .food-options, .activities-options {
+		display: none;
+	}
+
 	article {
 		margin: 10px;
 	}
@@ -195,6 +199,11 @@ body {
 				color: $green;
 				text-decoration: none;
 				text-transform: uppercase;
+
+				&.active {
+					color: #fff;
+					background: $green;
+				}
 			}
 
 		}
@@ -226,11 +235,25 @@ body {
 				width: 490px;
 				height: 700px;
 				@include border-radius(10px);
-				float: left;
+				margin: 20px auto;
 				background: #fff;
 				border: 1px solid $green;
 				position: relative;
 				overflow: hidden;
+				-webkit-filter: brightness(80%);
+				-moz-filter: brightness(80%);
+				-ms-filter: brightness(80%);
+				-o-filter: brightness(80%);
+				filter: brightness(80%);
+
+				&:hover, &.selected {
+					-webkit-filter: brightness(100%);
+					-moz-filter: brightness(100%);
+					-ms-filter: brightness(100%);
+					-o-filter: brightness(100%);
+					filter: brightness(100%);
+					@include box-shadow(1px, 1px, 45px, rgba(214,45,46,1));
+				}
 
 				img {
 					position: absolute;
@@ -539,6 +562,8 @@ body {
   z-index: 10;
   background-color: rgba(0,0,0,0.5);
   display: none;
+
+
 }
 
 /* form elements */

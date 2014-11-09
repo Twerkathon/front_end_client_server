@@ -65,6 +65,8 @@ body {
   top: 45px;
   text-decoration: none;
   font-size: 60px; }
+#main_container .music-options, #main_container .food-options, #main_container .activities-options {
+  display: none; }
 #main_container article {
   margin: 10px; }
 #main_container #first {
@@ -118,6 +120,9 @@ body {
   color: #283d3e;
   text-decoration: none;
   text-transform: uppercase; }
+  #main_container form #enjoy a.active {
+    color: #fff;
+    background: #283d3e; }
 #main_container form select, #main_container form input {
   border: none;
   background: #283d3e;
@@ -140,11 +145,26 @@ body {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     border-radius: 10px;
-    float: left;
+    margin: 20px auto;
     background: #fff;
     border: 1px solid #283d3e;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-filter: brightness(80%);
+    -moz-filter: brightness(80%);
+    -ms-filter: brightness(80%);
+    -o-filter: brightness(80%);
+    filter: brightness(80%); }
+    #main_container #third .placeOptions li:hover, #main_container #third .placeOptions li.selected {
+      -webkit-filter: brightness(100%);
+      -moz-filter: brightness(100%);
+      -ms-filter: brightness(100%);
+      -o-filter: brightness(100%);
+      filter: brightness(100%);
+      -webkit-box-shadow: 1px 1px 45px #d62d2e ;
+      -moz-box-shadow: 1px 1px 45px #d62d2e ;
+      -ms-box-shadow: 1px 1px 45px #d62d2e ;
+      box-shadow: 1px 1px 45px #d62d2e ; }
     #main_container #third .placeOptions li img {
       position: absolute;
       top: 0; }
