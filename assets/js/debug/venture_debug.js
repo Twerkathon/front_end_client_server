@@ -3,6 +3,6 @@
  * Copyright (c) 2014; * Licensed GPLv2+ */
 jQuery(document).ready(function($) {
 
-	/* stuff here */
+
 
 });
