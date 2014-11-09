@@ -178,15 +178,26 @@ $(document).ready(function () {
 
 		recommendations.push(carRentals);	
 	};
-		var  returnFlightRet= r; //data.results[0]["return_date"];
-		$("#returnFlightRet").html(returnFlightRet);
+
+		var dep = new Date(startDate);
+		var d = dep.toLocaleDateString();
+		console.log(d);
+
+		var ret = new Date(returnDate);
+		var r = ret.toLocaleDateString();
+		
+		var hotelDep = d; //data.results[0]["return_date"];
+		$("#hotelDep").html(hotelDep);
+		var hotelRet = r; //data.results[0]["return_date"];
+		$("#hotelRet").html(hotelRet);
+
 		// var carCost = recommendations[1].cost;
 		// console.log(recommendations[1]);
 		// document.getElementById("carCost").innerHTML(carCost);
 
 
 	// final itinerary when they choose location
-	var itinerary = {};
+	
 
 
 });
