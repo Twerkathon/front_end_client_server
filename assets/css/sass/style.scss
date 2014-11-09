@@ -9,9 +9,24 @@
           box-shadow: $top $left $blur $color #{$inset};
 }
 
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+/* Variables */
+
+$tenso: "tenso-bold",sans-serif;
+
+$helvetica: Helvetica, san-serif;
+
+$green: #283d3e;
+
 body {
 	width: 100%;
-	font: 400 27px/27px Helvetica, san-serif;
+	font: 400 27px/27px #helvetica;
 	background: #e7e8e9;
 }
 
@@ -20,7 +35,7 @@ body {
 #main_container {
 
 	h1 {
-		font: 400 45px/4em "tenso-bold",sans-serif;
+		font: 400 45px/4em $tenso;
 		color: #ffffff;
 		letter-spacing: 0.03em;
 		text-transform: uppercase;
@@ -32,26 +47,26 @@ body {
 	}
 
 	h2 {
-		font: 400 40px/4em "tenso",sans-serif;
+		font: 400 40px/4em $tenso;
 		color: #464646;
 	}
 
 	h2.white {
-		font: 400 45px/49px "tenso",sans-serif;
+		font: 400 45px/49px $tenso;
 		color: #ffffff;
 	}
 
 	h3 {
-		font: 400 40px/45px "tenso",sans-serif;
+		font: 400 40px/45px $tenso;
 		color: #ffffff;
 	}
 
 	h3.green {
-		color: #283d3e;
+		color: $green;
 	}
 
 	h4 {
-		font: 400 27px/2em "tenso",sans-serif;
+		font: 400 27px/2em $tenso;
 	}
 
 	h4.red {
@@ -69,19 +84,66 @@ body {
 #main_container {
 
 	header {
-		background: #283d3e;
+		background: $green;
 		text-align: center;
 		position: relative;
 		margin-bottom: 30px;
+		height: 120px;
 		@include box-shadow(0, 10px, 10px, rgba(0, 0, 0, 0.75));
+
+		.backButton {
+			display: block;
+			height: 34px;
+			width: 100px;
+			position: absolute;
+			top: 55px;
+			left: 20px;
+			background: url('../../images/backButton.png') center no-repeat;
+		}
 	}
 
 	.menuToggle {
 		color: #ffffff;
 		position: absolute;
 		right: 20px;
-		top: 20px;
+		top: 45px;
 		text-decoration: none;
+		font-size: 60px;
+	}
+
+	article {
+		margin: 10px;
+	}
+
+	#first {
+		margin-top: 95px;
+	}
+
+	.button {
+		display: block;
+		margin: 0 auto 30px;
+		background: $green;
+		padding: 15px;
+		width: 320px;
+		@include border-radius(5px);
+
+		p {
+			color: #d6c496;
+			text-align: center;
+			font: 400 38px/41px "tenso", san-serif;
+		}
+	}
+
+	form {
+
+		select, input {
+			border: none;
+			background: $green;
+			padding: 2px;
+			font-size: 26px;
+			color: #fff;
+			text-transform: uppercase;
+		}
 	}
 }
 
@@ -111,13 +173,13 @@ body {
 .onoffswitch-inner:before {
     content: "YES";
     padding-left: 11px;
-    background-color: #283D3E; color: #fff;
+    background-color: $green; color: #fff;
     font-weight: 400;
 }
 .onoffswitch-inner:after {
     content: "NO";
     padding-right: 11px;
-    background-color: #FFFFFF; color: #283D3E;
+    background-color: #FFFFFF; color: $green;
     text-align: right;
     font-weight: 400;
 }

@@ -17,11 +17,14 @@
 </head>
 <body>
 	<div id="main_container" class="container">
+
 		<header>
 
-			<a href="#" class="back"></a>
+			<a href="#" class="backButton"></a>
 
-			<h1>Venture 4<sup>th</sup></h1>
+			<h1>
+				<img src="images/logo.png">
+			</h1>
 
 			<a class="menuToggle" href="#menu">
 			  &#9776;
@@ -29,115 +32,238 @@
 
 		</header>
 
-		<section class="page" data-type="first">
+		<section class="page current first" data-type="first" id="first">
 
-			<div class="button">
-				<p>I KNOW WHERE I WANT TO GO</p>
-			</div>
+			<article class="content">
+
+				<div class="button">
+					<p>I KNOW WHERE<br> I WANT TO GO</p>
+				</div>
 
 
-			<div class="button">
-				<p>I NEED HELP <br>BOOKING MY TRIP</p>
-			</div>
+				<div class="button nextButton">
+					<p>I NEED HELP <br>BOOKING MY TRIP</p>
+				</div>
+
+			</article>
 
 		</section>
 
-		<section class="page" data-type="second">
+		<section class="page" data-type="second" id="second">
 
-			<form>
-				<div id="temp" class="sentence">
-					<p>I WANT TO GO SOMEWHERE</p>
-					<select required>
-						 <option value="warm">Warm</option>
-						  <option value="cold">Cold</option>
-					</select>
-				</div>
+			<article class="content">
 
-				<div id="enjoy" class="sentence">
-					<p>I ENJOY</p> 
-
-					<a class="music" href="#">Live Music</a> 
-					<div class="music-options">
-						<input type="checkbox" name="music" value="Jazz">Jazz<br>
-						<input type="checkbox" name="music" value="Rock">Rock<br>
-						<input type="checkbox" name="music" value="Tapas">Classical
+				<form>
+					<div id="temp" class="sentence">
+						<p>I WANT TO GO SOMEWHERE</p>
+						<select>
+							 <option value="warm">Warm</option>
+							 <option value="cold">Cold</option>
+						</select>
 					</div>
 
-					<a class="food" href="#">Food</a>
-					<div class="food-options">
-						<input type="checkbox" name="food" value="Pizza">Pizza<br>
-						<input type="checkbox" name="food" value="Sushi">Sushi<br>
-						<input type="checkbox" name="food" value="Tapas">Tapas
+					<div id="enjoy" class="sentence">
+						<p>I ENJOY</p> 
+
+						<a class="music" href="#">Live Music</a> 
+						<div class="music-options">
+							<input type="checkbox" name="music" value="Jazz">Jazz<br>
+							<input type="checkbox" name="music" value="Rock">Rock<br>
+							<input type="checkbox" name="music" value="Tapas">Classical
+						</div>
+
+						<a class="food" href="#">Food</a>
+						<div class="food-options">
+							<input type="checkbox" name="food" value="Pizza">Pizza<br>
+							<input type="checkbox" name="food" value="Sushi">Sushi<br>
+							<input type="checkbox" name="food" value="Tapas">Tapas
+						</div>
+
+						<a class="activities" href="#">Activities</a>
+						<div class="activities-options">
+							<input type="checkbox" name="activities" value="Skiing">Skiing<br>
+							<input type="checkbox" name="activities" value="Swimming">Swimming<br>
+							<input type="checkbox" name="activities" value="Sight Seeing">Sight Seeing 
+						</div>
 					</div>
 
-					<a class="activities" href="#">Activities</a>
-					<div class="activities-options">
-						<input type="checkbox" name="activities" value="Skiing">Skiing<br>
-						<input type="checkbox" name="activities" value="Swimming">Swimming<br>
-						<input type="checkbox" name="activities" value="Sight Seeing">Sight Seeing 
+					<div id="date" class="sentence">
+						<p>I CAN TRAVEL</p>
+						<input type="date" required>
+						<p>to</p>
+						<input type="date" required>
+
+						<p class="small">Are you flexible?</p>
+						<div class="onoffswitch">
+						    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+						    <label class="onoffswitch-label" for="myonoffswitch">
+						        <span class="onoffswitch-inner"></span>
+						        <span class="onoffswitch-switch"></span>
+						    </label>
+						</div>
 					</div>
-				</div>
 
-				<div id="date" class="sentence">
-					<p>I CAN TRAVEL</p>
-					<input type="date" required>
-					<p>to</p>
-					<input type="date" required>
-
-					<p class="small">Are you flexible?</p>
-					<div class="onoffswitch">
-					    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-					    <label class="onoffswitch-label" for="myonoffswitch">
-					        <span class="onoffswitch-inner"></span>
-					        <span class="onoffswitch-switch"></span>
-					    </label>
+					<div id="budget" class="sentence">
+						<p>I CAN ONLY SPEND</p>
+						<input tyle="text" required>
 					</div>
-				</div>
 
-				<div id="budget" class="sentence">
-					<p>I CAN ONLY SPEND</p>
-					<input tyle="text" required>
-				</div>
-			</form>
+					<input class="nextButton" type="submit" value="NEXT">
+				</form>
+
+			</article>
 
 		</section>
 
-		<section class="page" data-type="third">
+		<section class="page" data-type="third" id="third">
 
-			<div class="button">
+			<article class="content">
 
-			</div>
+				<h2>Select your destination:</h2>
 
+				<ul class="placeOptions">
+					<li>
+						<img src="images/madrid.png">
+						<h2>Madrid, Spain</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloreaqest, qui.</p>
 
-			<div class="button">
+						<div class="cardButtons">
+							<a href="#">Details</a>
+							<a href="#">Select</a>
+						</div>
+					</li>
+					<li>
+						<img src="images/miami.png">
+						<h2>Miami, Florida</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloreaqest, qui.</p>
 
-			</div>
+						<div class="cardButtons">
+							<a href="#">Details</a>
+							<a href="#">Select</a>
+						</div>
+					</li>
+					<li>
+						<img src="images/cabo.png">
+						<h2>Cabo, San Lucas</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloreaqest, qui.</p>
+
+						<div class="cardButtons">
+							<a href="#">Details</a>
+							<a href="#">Select</a>
+						</div>
+					</li>
+				</ul>
+
+				<a class="nextButton" href="#">NEXT</a>
+
+			</article>
 
 		</section>
 
-		<section class="page" data-type="fourth">
+		<section class="page" data-type="fourth" id="fourth">
 
-			<div class="button">
+			<article class="content">
 
-			</div>
+				<h2>Select your package:</h2>
 
+				<ul class="packageOptions">
+					<li>
+						<div class="price">
+							<p>Total Price</p>
+							<hr>
+							<p>$2,000</p>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</p>
+						<div class="cardButtons">
+							<a href="#">Details</a>
+							<a href="#">Select</a>
+						</div>
+					</li>
+					<li>
+						<div class="price">
+							<p>Total Price</p>
+							<hr>
+							<p>$2,000</p>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</p>
+						<div class="cardButtons">
+							<a href="#">Details</a>
+							<a href="#">Select</a>
+						</div>
+					</li>
+					<li>
+						<div class="price">
+							<p>Total Price</p>
+							<hr>
+							<p>$2,000</p>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</p>
+						<div class="cardButtons">
+							<a href="#">Details</a>
+							<a href="#">Select</a>
+						</div>
+					</li>
+					<li>
+						<div class="price">
+							<p>Total Price</p>
+							<hr>
+							<p>$2,000</p>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</p>
+						<div class="cardButtons">
+							<a href="#">Details</a>
+							<a href="#">Select</a>
+						</div>
+					</li>
+				</ul>
 
-			<div class="button">
+				<a class="nextButton" href="#">NEXT</a>
 
-			</div>
+			</article>
 
 		</section>
 
-		<section class="page" data-type="fifth">
+		<section class="page" data-type="fifth" id="fifth">
 
-			<div class="button">
+			<article class="content">
 
-			</div>
+				<a class="nextButton" href="#">NEXT</a>
 
+			</article>
 
-			<div class="button">
+		</section>
 
-			</div>
+		<section class="page last" data-type="sixth" id="sixth">
+
+			<article class="content">
+
+				<h2>Trip Summary:</h2>
+
+				<p>PACKAGE: Destination: Madrid, Spain<br>
+				Flight: BOS > MAD December 21st, 2014<br>
+				Lodging: Urban Studio </br>
+				Car Rental: Yes <br>
+				Return Flight: MAD > BOS December 31st, 2014</p>
+
+				<hr>
+
+				<p>ADD ON: Groupon for Dinner<br>
+				Jessica Simpson Concert<br>
+				Prado Museum</p>
+
+				<hr>
+
+				<p>Flight: $1300<br>
+				Lodging: $600<br>
+				Car Rental: $250<br>
+				Add-ons: $75<br>
+				Tax: $240<br>
+				Estimated Savings: $835<br>
+				<strong>GRAND TOTAL: $2071.62</strong></p>
+
+				<a class="finishButton" href="#">Venture Fourth</a>
+
+			</article>
 
 		</section>
 

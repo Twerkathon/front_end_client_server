@@ -1,13 +1,14 @@
 /* Venture 4th styles */
 /* Mixins */
+/* Variables */
 body {
   width: 100%;
-  font: 400 27px/27px Helvetica, san-serif;
+  font: 400 27px/27px #helvetica;
   background: #e7e8e9; }
 
 /* Typography */
 #main_container h1 {
-  font: 400 45px/4em "tenso-bold",sans-serif;
+  font: 400 45px/4em "tenso-bold", sans-serif;
   color: #ffffff;
   letter-spacing: 0.03em;
   text-transform: uppercase; }
@@ -15,18 +16,18 @@ body {
   vertical-align: super;
   font-size: 25px; }
 #main_container h2 {
-  font: 400 40px/4em "tenso",sans-serif;
+  font: 400 40px/4em "tenso-bold", sans-serif;
   color: #464646; }
 #main_container h2.white {
-  font: 400 45px/49px "tenso",sans-serif;
+  font: 400 45px/49px "tenso-bold", sans-serif;
   color: #ffffff; }
 #main_container h3 {
-  font: 400 40px/45px "tenso",sans-serif;
+  font: 400 40px/45px "tenso-bold", sans-serif;
   color: #ffffff; }
 #main_container h3.green {
   color: #283d3e; }
 #main_container h4 {
-  font: 400 27px/2em "tenso",sans-serif; }
+  font: 400 27px/2em "tenso-bold", sans-serif; }
 #main_container h4.red {
   color: #d62d2e; }
 #main_container h4.white {
@@ -38,16 +39,51 @@ body {
   text-align: center;
   position: relative;
   margin-bottom: 30px;
+  height: 120px;
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.75) ;
   -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.75) ;
   -ms-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.75) ;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.75) ; }
+  #main_container header .backButton {
+    display: block;
+    height: 34px;
+    width: 100px;
+    position: absolute;
+    top: 55px;
+    left: 20px;
+    background: url("../../images/backButton.png") center no-repeat; }
 #main_container .menuToggle {
   color: #ffffff;
   position: absolute;
   right: 20px;
-  top: 20px;
-  text-decoration: none; }
+  top: 45px;
+  text-decoration: none;
+  font-size: 60px; }
+#main_container article {
+  margin: 10px; }
+#main_container #first {
+  margin-top: 95px; }
+#main_container .button {
+  display: block;
+  margin: 0 auto 30px;
+  background: #283d3e;
+  padding: 15px;
+  width: 320px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px; }
+  #main_container .button p {
+    color: #d6c496;
+    text-align: center;
+    font: 400 38px/41px "tenso", san-serif; }
+#main_container form select, #main_container form input {
+  border: none;
+  background: #283d3e;
+  padding: 2px;
+  font-size: 26px;
+  color: #fff;
+  text-transform: uppercase; }
 
 /* form elements */
 .onoffswitch {
@@ -93,7 +129,7 @@ body {
 .onoffswitch-inner:before {
   content: "YES";
   padding-left: 11px;
-  background-color: #283D3E;
+  background-color: #283d3e;
   color: #fff;
   font-weight: 400; }
 
@@ -101,7 +137,7 @@ body {
   content: "NO";
   padding-right: 11px;
   background-color: #FFFFFF;
-  color: #283D3E;
+  color: #283d3e;
   text-align: right;
   font-weight: 400; }
 
