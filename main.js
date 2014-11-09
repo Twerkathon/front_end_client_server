@@ -117,7 +117,8 @@ $(document).ready(function () {
 				var  returnFlightRet= r; //data.results[0]["return_date"];
 				$("#returnFlightRet").html(returnFlightRet);
 
-
+				var finalFlightCost = data.results[0]["price"];
+				$("#finalFlightCost").html('$' + finalFlightCost);
 
 
 				// console.log(json);
@@ -170,6 +171,8 @@ $(document).ready(function () {
 				$("#carDeparture").html(carDeparture);
 				var carReturn = r; //"2015-10-18";
 				$("#carReturn").html(carReturn);
+				var finalCarCost = data.results[1]["cars"][1]["estimated_total"]["amount"];; //"2015-10-18";
+				$("#finalCarCost").html(finalCarCost);
 
 				// console.log(json);
 				return json
@@ -190,6 +193,16 @@ $(document).ready(function () {
 		$("#hotelDep").html(hotelDep);
 		var hotelRet = r; //data.results[0]["return_date"];
 		$("#hotelRet").html(hotelRet);
+
+		var finalDest = d; //data.results[0]["return_date"];
+		$("#finalDest").html(finalDest);
+		var finalReturn = r; //data.results[0]["return_date"];
+		$("#finalReturn").html(finalReturn);
+		var hotelDep = d; //data.results[0]["return_date"];
+		$("#hotelDep").html(hotelDep);
+		var hotelRet = r; //data.results[0]["return_date"];
+		$("#hotelRet").html(hotelRet);
+
 
 		// var carCost = recommendations[1].cost;
 		// console.log(recommendations[1]);
