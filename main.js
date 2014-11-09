@@ -28,12 +28,13 @@ $(document).ready(function () {
 
 	flights = $.ajax({
 		url: "http://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?origin=" + getOrigin() + "&departure_date=" + getDepartureDate() + "&duration=1--30&max_price=" + getMaxPrice() + "&apikey=nRLZ1a7XwQyUiepJflPOx1djGdUo9bGf",
+		dataType: 'json',
 	}).done(function( data ){
-		return data.responseJSON.results;
+		console.log(data.results[1].airline);
 
 
 	});
-	console.log(flights);
+	//console.log(flights);
 
 });
 
