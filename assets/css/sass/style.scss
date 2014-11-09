@@ -424,6 +424,7 @@ body {
 			left: 0;
 			position: absolute;
 			z-index: 1;
+			width: 100%;
 		}
 
 		figure {
@@ -435,6 +436,7 @@ body {
 
 		img.detailsBanner {
 			margin-top: 100px;
+			width: 100%;
 		}
 
 		h2.redStyle {
@@ -477,7 +479,7 @@ body {
 		}
 
 		.detailsCon {
-			width: 480px;
+			width: 440px;
 			display: block;
 			float: left;
 			margin-left: 20px;
