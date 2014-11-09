@@ -23,10 +23,10 @@ $(document).ready(function () {
 		first.setDate(first.getDate()-3);
 		last.setDate(last.getDate()+3)
 		var fyyyy = first.getFullYear().toString();
-		var fmm = first.getMonth().toString();
+		var fmm = (first.getMonth()+1).toString();
 		var fdd  = first.getDate().toString();
 		var lyyyy = last.getFullYear().toString();
-		var lmm = last.getMonth().toString();
+		var lmm = (last.getMonth()+1).toString();
 		var ldd  = last.getDate().toString();
 
 
@@ -36,31 +36,7 @@ $(document).ready(function () {
 		var lddChars = ldd.split('');
 
 		// CONCAT THE STRINGS IN YYYY-MM-DD FORMAT
-		var datestring = fyyyy + '-' + (fmmChars[1]?fmm:"0"+fmmChars[0]) + '-' + (fddChars[1]?fdd:"0"+fddChars[0]) + '--' + lyyyy + '-' + (lmmChars[1]?lmm:"0"+lmmChars[0]) + '-' + (lddChars[1]?ldd:"0"+lddChars[0]);
-		// if (fmm.length < 2){
-		// 	console.log(fmm);
-		// 	fmm = '0' + fmm;
-		// 	// var date= fyyyy + '-0' + fmm + '-' + fdd + "--" + lyyyy + '-' + lmm + '-' + ldd; 
-		// } 
-		// if ( fdd.length < 2 ){
-		// 	console.log(fdd);
-		// 	fdd = '0' + fdd;
-
-		// }	
-		// if (lmm.length < 2 ){
-		// 	console.log(lmm);
-		// 	lmm = '0' + lmm;
-		// }
-		
-		// if (ldd.length < 2) {
-		// 	console.log(ldd);
-		// 	ldd = '0' + ldd;
-		// }
-		// // } else{
-		// // 	// var date= fyyyy + '-' + fmm + '-' + fdd + "--" + lyyyy + '-' + lmm + '-' + ldd; 
-		// // };
-
-		// var date= fyyyy + '-' + fmm + '-' + fdd + "--" + lyyyy + '-' + lmm + '-' + ldd; 
+		var datestring = fyyyy + '-' + (fmmChars[1]?fmm:"0"+fmmChars[0]) + '-' + (fddChars[1]?fdd:"0"+fddChars[0]) + '--' + lyyyy + '-' + (lmmChars[1]?lmm:"0"+lmmChars[0]) + '-' + (lddChars[1]?ldd:"0"+lddChars[0]); 
 		return datestring;
 		// flexible or not
 	}
@@ -73,21 +49,10 @@ $(document).ready(function () {
 		return 5000;
 	}
 
-	// var aggregationMode = function(){
-	// 	return 
-	// }
-
-	// var concat = function(getOrigin, getDestination, getDepartureDate, getDuration, getMaxPrice) {
-	// 	request = "http://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?origin=" + getOrigin + "&departure_date=" + getDepartureDate + "&duration=1--30&max_price=" + getMaxPrice + "&apikey=nRLZ1a7XwQyUiepJflPOx1djGdUo9bGf";
-	// 	return request;
-	// }
-
-	// var departure = 
-
-	// for loop to loop through different destinations
+	// loop through the different destinations
 	for (var i = 0; i < getDestination().length; i++) {
 		flights = $.ajax({
-		url: "http://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?origin=" + getOrigin() + "&destination=" + getDestination()[i] + "&departure_date=" + getDepartureDateFlexible(getDepartureDate) + "&duration=1--30&max_price=" + getMaxPrice() + "&apikey=nRLZ1a7XwQyUiepJflPOx1djGdUo9bGf",
+		url: "http://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?origin=" + getOrigin() + "&destination=" + getDestination()[i] + "&departure_date=" + getDepartureDateFlexible("2015-09-10") + "&duration=1--30&max_price=" + getMaxPrice() + "&apikey=nRLZ1a7XwQyUiepJflPOx1djGdUo9bGf",
 		dataType: 'json',
 	}).done(function( data ){
 		console.log(data);
@@ -102,13 +67,7 @@ $(document).ready(function () {
 
 
 	};
-	// flights = $.ajax({
-	// 	url: "http://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?origin=" + getOrigin() + "&destination=" + getDestination() + "&departure_date=" + getDepartureDate() + "&duration=1--30&max_price=" + getMaxPrice() + "&apikey=nRLZ1a7XwQyUiepJflPOx1djGdUo9bGf",
-	// 	dataType: 'json',
-	// }).done(function( data ){
-	// 	console.log(data);
-	// });
-	//console.log(flights);
+
 
 });
 
