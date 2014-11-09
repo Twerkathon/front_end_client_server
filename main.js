@@ -7,10 +7,6 @@ $(document).ready(function () {
 	var getDestination = function(){
 		// array of 
 		return ["MAD"];
-
-		// return dest;
-		// console.log(dest);
-
 	}
 
 	var getDepartureDateCar= function(depDate){
@@ -75,12 +71,13 @@ $(document).ready(function () {
 				// console.log(data.results);
 			// for (var i = 0; i < 3; i++) { //3 options for each destination, max.
 				var json = {};
-				if (getDestination()[i] == "LHR"){
-					json.city = "London, UK";
-				}
-				else if (getDestination()[i] == "MAD"){
-					json.city = "Madrid, ES";
-				}
+				// if (getDestination()[i] == "LHR"){
+				// 	json.city = "London, UK";
+				// }
+				// else if (getDestination()[i] == "MAD"){
+				// 	json.city = "Madrid, ES";
+				// }
+				json.city = "Madrid, ES";
 				json.travelType = "flight";
 				json.brand = data.results[0]["airline"];
 				json.destination = data.results[0]["destination"];
@@ -88,6 +85,19 @@ $(document).ready(function () {
 				json.cost = data.results[0]["price"];
 				json.departureDate = data.results[0]["departure_date"];
 				json.returnDate = data.results[0]["return_date"];
+
+				var flightBrand =  data.results[0]["airline"];
+				$("#flightBrand").html(flightBrand);
+				var flightDest = data.results[0]["destination"];
+				$("#flightDest").html(flightDest);
+				var flightCost = data.results[0]["price"];
+				$("#flightCost").html(flightCost);
+				var flightDeparture = data.results[0]["departure_date"];
+				$("#flightDeparture").html(flightDeparture);
+				var flightReturn = data.results[0]["return_date"];
+				$("#flightReturn").html(flightReturn);
+
+
 				// console.log(json);
 				return json;
 		
@@ -103,12 +113,13 @@ $(document).ready(function () {
 			// console.log(data);
 			// for (var i = 0; i < 3; i++) { //3 options for each destination, max.
 				var json = {};
-				if (getDestination()[i] == "LHR"){
-					json.city = "London, UK";
-				}
-				else if (getDestination()[i] == "MAD"){
-					json.city = "Madrid, ES";
-				}
+				// if (getDestination()[i] == "LHR"){
+				// 	json.city = "London, UK";
+				// }
+				// else if (getDestination()[i] == "MAD"){
+				// 	json.city = "Madrid, ES";
+				// }
+				json.city = "Madrid, ES";
 				json.travelType = "car_rental";
 				json.brand = data.results[1]["provider"]["company_name"];
 				json.destination = data.results[1]["airport"];
@@ -116,6 +127,18 @@ $(document).ready(function () {
 				json.cost = data.results[1]["cars"][1]["estimated_total"]["amount"];
 				json.departureDate = getDepartureDateCar("2015-09-10")
 				json.returnDate = "2015-10-18"
+
+				var carCost = data.results[1]["cars"][1]["estimated_total"]["amount"];
+				$("#carCost").html(carCost);
+				var carDest = data.results[1]["airport"];
+				$("#carDest").html(carDest);
+				var carBrand = data.results[1]["provider"]["company_name"];
+				$("#carBrand").html(carBrand);
+				var carDeparture = getDepartureDateCar("2015-09-10");
+				$("#carDeparture").html(carDeparture);
+				var carReturn = "2015-10-18";
+				$("#carReturn").html(carReturn);
+
 				// console.log(json);
 				return json
 			// };
@@ -123,7 +146,11 @@ $(document).ready(function () {
 
 		recommendations.push(carRentals);	
 	};
-		console.log(recommendations)
+		
+		// var carCost = recommendations[1].cost;
+		// console.log(recommendations[1]);
+		// document.getElementById("carCost").innerHTML(carCost);
+
 
 	// final itinerary when they choose location
 	var itinerary = {};
