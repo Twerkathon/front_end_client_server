@@ -29,9 +29,12 @@ $red: #d62d2e;
 body {
 	width: 100%;
 	background: #e7e8e9;
+	color: #283d3e;
+	position: relative;
 
 	p {
 		font: 400 27px/27px $helvetica;
+		color: #283d3e;
 	}
 }
 
@@ -52,7 +55,7 @@ body {
 	}
 
 	h2 {
-		font: 400 40px/4em $tenso;
+		font: 400 40px/49px $tenso;
 		color: #464646;
 		text-transform: uppercase;
 	}
@@ -95,6 +98,7 @@ body {
 		position: relative;
 		margin-bottom: 30px;
 		height: 120px;
+		z-index: 1000;
 		@include box-shadow(0, 10px, 10px, rgba(0, 0, 0, 0.75));
 
 		.backButton {
@@ -210,9 +214,10 @@ body {
 		position: relative;
 		padding-bottom: 120px;
 
-		.nextStyles {
+		.nextContainer {
 			position: absolute;
 			bottom: 20px;
+			width: 100%;
 		}
 
 		.placeOptions {
@@ -300,6 +305,32 @@ body {
 
 	#fourth {
 
+		article {
+			margin: 10px 0;
+		}
+
+		position: relative;
+
+		img {
+			top: -30px;;
+			left: 0;
+			position: absolute;
+		}
+
+		h2.redStyle {
+			display: block;
+			position: absolute;
+			top: 250px;
+			left: 0;
+			background: #d62d2e;
+			padding: 5px 0;
+			text-align: center;
+			font: 400 36px $tenso;
+			width: 100%;
+			color: #fff;
+			text-transform: uppercase;
+		}
+
 		.price {
 			width: 135px;
 			height: 120px;
@@ -309,6 +340,8 @@ body {
 		}
 
 		.packageOptions {
+
+			margin-top: 255px;
 
 			li {
 				height: 120px;
@@ -354,6 +387,158 @@ body {
 			}
 		}
 	}
+
+	#fifth {
+
+		article {
+			margin: 0;
+		}
+
+		position: relative;
+
+		img.banner {
+			top: -230px;;
+			left: 0;
+			position: absolute;
+			z-index: 1;
+		}
+
+		figure {
+			display: block;
+			float: left;
+			height: 160px;
+			width: 138px;
+		}
+
+		img.detailsBanner {
+			margin-top: 100px;
+		}
+
+		h2.redStyle {
+			display: block;
+			position: absolute;
+			top: 50px;
+			left: 0;
+			background: #d62d2e;
+			padding: 5px 0;
+			text-align: center;
+			font: 400 36px $tenso;
+			width: 100%;
+			color: #fff;
+			text-transform: uppercase;
+		}
+
+
+		.packageDetails {
+
+			li {
+				height: 140px;
+				display: block;
+				min-height: 160px;
+				padding: 5px 0;
+			}
+
+			li:nth-child(even) {
+				background: #ffffff;
+			}
+
+			p.info {
+				font: 400 22px/27px $helvetica;
+			}
+
+			p.money {
+				color: $red;
+				font: 400 26px/26px $tenso;
+				display: inline-block;
+			}
+		}
+
+		.detailsCon {
+			width: 480px;
+			display: block;
+			float: left;
+			margin-left: 20px;
+			position: relative;
+			height: 160px;
+		}
+
+		.cardButtons {
+			width: 100%;
+			display: block;
+			position: absolute;
+			bottom: 5px;
+			margin: 10px auto;
+
+			a {
+				height: 34px;
+				width: 210px;
+				display: inline-block;
+				right: 20px;
+				bottom: 0;
+				position: absolute;
+				font: 400 26px $tenso;
+				text-align: center;
+				padding: 5px 0;
+				clear: both;
+				color: #fff;
+				text-transform: uppercase;
+				text-decoration: none;
+
+				&.green {
+					background: $green;
+				}
+
+			}
+		}
+	}
+
+	#sixth {
+
+		p {
+			line-height: 1.6em;
+
+			&.offer {
+				font-size: 22px;
+				margin-left: 10px;
+			}
+		}
+
+		hr {
+			border-top: 2px solid $green;
+		}
+
+		.finishButton {
+			height: 34px;
+			width: auto;
+			display: inline-block;
+			font: 400 26px $tenso;
+			text-align: center;
+			padding: 5px;
+			clear: both;
+			color: #fff;
+			text-transform: uppercase;
+			text-decoration: none;
+
+			&.green {
+				background: $green;
+			}
+
+			&.red {
+				background: $red;
+			}
+		}
+	}
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
 }
 
 /* form elements */
