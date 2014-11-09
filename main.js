@@ -8,14 +8,19 @@ $(document).ready(function () {
 		// array of 
 
 		// SHERRIE
+		$('#formSubmit').click(){
+			var e = document.getElementById('temperature');
+			var strUser = e.options[selectedIndex].text;
+			if (strUser == 'warm'){
+				return ["MAD"];
+			}
+			else if (strUser == 'cold'){
+				return ["LHR"];
+			}
 
+		}
 		// var temp = $(#city).val();
-		// if (temp == 'warm'){
-		// 	return ["MAD"];
-		// }
-		// else if (temp == 'cold'){
-		// 	return ["LHR"];
-		// }
+		
 
 		return ["LHR","MAD"]
 		
@@ -82,7 +87,7 @@ $(document).ready(function () {
 			url: "http://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?origin=" + getOrigin() + "&destination=" + getDestination()[i] + "&departure_date=" + getDepartureDateFlight("2015-09-10") + "&duration=1--30&max_price=" + getMaxPrice() + "&apikey=nRLZ1a7XwQyUiepJflPOx1djGdUo9bGf",
 			dataType: 'json',
 			}).done(function( data ){
-		
+				console.log(data.results);
 			// for (var i = 0; i < 3; i++) { //3 options for each destination, max.
 				var json = {};
 				if (getDestination()[i] == "LHR"){
