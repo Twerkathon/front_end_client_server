@@ -18,7 +18,8 @@ body {
   font-size: 25px; }
 #main_container h2 {
   font: 400 40px/4em "tenso", sans-serif;
-  color: #464646; }
+  color: #464646;
+  text-transform: uppercase; }
 #main_container h2.white {
   font: 400 45px/49px "tenso", sans-serif;
   color: #ffffff; }
@@ -85,7 +86,8 @@ body {
   display: block;
   width: 174px;
   height: 75px;
-  background: url("../../images/nextButton.png") center no-repeat; }
+  background: url("../../images/nextButton.png") center no-repeat;
+  margin: 0 auto; }
 #main_container form .sentence {
   margin-bottom: 20px; }
 #main_container form p {
@@ -120,10 +122,11 @@ body {
   color: #fff;
   text-transform: uppercase; }
 #main_container #third {
-  position: relative; }
+  position: relative;
+  padding-bottom: 120px; }
   #main_container #third .nextStyles {
     position: absolute;
-    bottom: 0; }
+    bottom: 20px; }
   #main_container #third .placeOptions li {
     display: block;
     width: 490px;
@@ -169,6 +172,61 @@ body {
       padding: 5px 0;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px; }
+    #main_container #third .placeOptions li .cardButtons {
+      width: 330px;
+      position: absolute;
+      top: 575px;
+      left: 75px; }
+      #main_container #third .placeOptions li .cardButtons a {
+        height: 34px;
+        width: 50%;
+        float: left;
+        display: inline-block;
+        font: 400 26px "tenso", sans-serif;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        padding: 5px 0; }
+        #main_container #third .placeOptions li .cardButtons a.green {
+          background: #283d3e; }
+        #main_container #third .placeOptions li .cardButtons a.red {
+          background: #d62d2e; }
+#main_container #fourth .price {
+  width: 135px;
+  height: 120px;
+  float: left;
+  text-align: center;
+  margin-right: 10px; }
+#main_container #fourth .packageOptions li {
+  height: 120px;
+  padding: 20px 5px 0 5px; }
+  #main_container #fourth .packageOptions li p.description {
+    width: 250px;
+    font: 400 20px/23px Helvetica, san-serif;
+    display: block;
+    float: left; }
+#main_container #fourth .packageOptions li:nth-child(odd) {
+  background: #ffffff; }
+#main_container #fourth .cardButtons {
+  width: 160px;
+  display: block;
+  float: right; }
+  #main_container #fourth .cardButtons a {
+    height: 34px;
+    width: 100%;
+    display: block;
+    font: 400 26px "tenso", sans-serif;
+    text-align: center;
+    padding: 5px 0;
+    clear: both;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none; }
+    #main_container #fourth .cardButtons a.green {
+      background: #283d3e; }
+    #main_container #fourth .cardButtons a.red {
+      background: #d62d2e; }
 
 /* form elements */
 .onoffswitch {
@@ -292,5 +350,8 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+.clear {
+  clear: both; }
 
 /*# sourceMappingURL=style.css.map */
