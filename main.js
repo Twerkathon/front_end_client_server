@@ -91,7 +91,7 @@ $(document).ready(function () {
 				var flightDest = data.results[0]["destination"];
 				$("#flightDest").html(flightDest);
 				var flightCost = data.results[0]["price"];
-				$("#flightCost").html(flightCost);
+				$("#flightCost").html('$' + flightCost);
 				var flightDeparture = data.results[0]["departure_date"];
 				$("#flightDeparture").html(flightDeparture);
 				var flightReturn = data.results[0]["return_date"];
@@ -129,7 +129,7 @@ $(document).ready(function () {
 				json.returnDate = "2015-10-18"
 
 				var carCost = data.results[1]["cars"][1]["estimated_total"]["amount"];
-				$("#carCost").html(carCost);
+				$("#carCost").html('$' + carCost);
 				var carDest = data.results[1]["airport"];
 				$("#carDest").html(carDest);
 				var carBrand = data.results[1]["provider"]["company_name"];
