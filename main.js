@@ -6,27 +6,23 @@ $(document).ready(function () {
 
 	var getDestination = function(){
 		// array of 
-
+		var dest = '';
 		// SHERRIE
-		$('#formSubmit').click(){
+		$('#formSubmit').click(function(){
 			var e = document.getElementById('temperature');
 			var strUser = e.options[selectedIndex].text;
 			console.log(strUser);
 			if (strUser == 'warm'){
-				return ["MAD"];
+				dest = ["MAD"];
 			}
 			else if (strUser == 'cold'){
-				return ["LHR"];
+				dest = ["LHR"];
 			}
 
-		}
-		// var temp = $(#city).val();
-		
+		});
 
-		// return ["LHR","MAD"]
-		
-		// destination logic
-		// return ["LAX","NCE","FPO"];
+		return dest;
+
 	}
 
 	var getDepartureDateCar= function(depDate){
