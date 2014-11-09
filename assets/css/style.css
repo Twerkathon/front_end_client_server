@@ -12,7 +12,7 @@ body {
 
 /* Typography */
 #main_container h1 {
-  font: 400 45px/4em "tenso", sans-serif;
+  font: 400 45px/3em "tenso", sans-serif;
   color: #ffffff;
   letter-spacing: 0.03em;
   text-transform: uppercase; }
@@ -44,7 +44,7 @@ body {
   text-align: center;
   position: relative;
   margin-bottom: 30px;
-  height: 120px;
+  height: 100px;
   z-index: 1000;
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.75) ;
   -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.75) ;
@@ -55,14 +55,14 @@ body {
     height: 34px;
     width: 100px;
     position: absolute;
-    top: 55px;
+    top: 35px;
     left: 20px;
     background: url("../../images/backButton.png") center no-repeat; }
 #main_container .menuToggle {
   color: #ffffff;
   position: absolute;
   right: 20px;
-  top: 45px;
+  top: 25px;
   text-decoration: none;
   font-size: 60px; }
 #main_container .music-options, #main_container .food-options, #main_container .activities-options {
@@ -290,12 +290,12 @@ body {
     height: 160px;
     width: 138px; }
   #main_container #fifth img.detailsBanner {
-    margin-top: 100px;
+    margin-top: 80px;
     width: 100%; }
   #main_container #fifth h2.redStyle {
     display: block;
     position: absolute;
-    top: 50px;
+    top: 30px;
     left: 0;
     background: #d62d2e;
     padding: 5px 0;
