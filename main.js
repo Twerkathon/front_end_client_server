@@ -1,8 +1,11 @@
 $(document).ready(function () {
 
-	var startDate = $("#startDate").val();
-	var endDate = $("#endDate").val();
-	console.log(endDate);
+	// var startDate = $("#startDate").val();
+	// var endDate = $("#endDate").val();
+	// console.log(endDate);
+
+	var returnDate = '2014-12-20';
+	var startDate = '2014-12-05';
 
 	var getOrigin = function(){
 		return "BOS";
@@ -54,7 +57,7 @@ $(document).ready(function () {
 
 	var getReturnDate = function() {
 		// SHERRIE
-		return "2015-10-18";
+		return returnDate;
 	}
 
 	var getMaxPrice = function(){
@@ -69,7 +72,7 @@ $(document).ready(function () {
 	for (var i = 0; i < getDestination().length; i++) {
 		// console.log(getDestination()[i]);
 		flights = $.ajax({
-			url: "http://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?origin=" + getOrigin() + "&destination=" + getDestination()[i] + "&departure_date=" + getDepartureDateFlight("2015-09-10") + "&duration=1--30&max_price=" + getMaxPrice() + "&apikey=nRLZ1a7XwQyUiepJflPOx1djGdUo9bGf",
+			url: "http://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?origin=" + getOrigin() + "&destination=" + getDestination()[i] + "&departure_date=" + startDate + "&duration=1--30&max_price=" + getMaxPrice() + "&apikey=nRLZ1a7XwQyUiepJflPOx1djGdUo9bGf",
 			dataType: 'json',
 			}).done(function( data ){
 				// console.log(data.results);
@@ -88,7 +91,16 @@ $(document).ready(function () {
 				
 				json.cost = data.results[0]["price"];
 				json.departureDate = data.results[0]["departure_date"];
-				json.returnDate = data.results[0]["return_date"];
+				// startDate = data.results[0]["departure_date"];
+				// returnDate = data.results[0]["return_date"];
+
+				var dep = new Date(startDate);
+				var d = dep.toLocaleDateString();
+				console.log(d);
+
+				var ret = new Date(returnDate);
+				var r = ret.toLocaleDateString();
+				console.log(r);
 
 				var flightBrand =  data.results[0]["airline"];
 				$("#flightBrand").html(flightBrand);
@@ -96,9 +108,9 @@ $(document).ready(function () {
 				$("#flightDest").html(flightDest);
 				var flightCost = data.results[0]["price"];
 				$("#flightCost").html('$' + flightCost);
-				var flightDeparture = data.results[0]["departure_date"];
+				var flightDeparture = d; // data.results[0]["departure_date"];
 				$("#flightDeparture").html(flightDeparture);
-				var flightReturn = data.results[0]["return_date"];
+				var flightReturn = r; //data.results[0]["return_date"];
 				$("#flightReturn").html(flightReturn);
 
 
@@ -110,8 +122,9 @@ $(document).ready(function () {
 		});
 			recommendations.push(flights);
 
+
 		carRentals = $.ajax({
-			url: "http://api.sandbox.amadeus.com/v1.2/cars/search-airport?location=" + getDestination()[i] + "&pick_up=" + getDepartureDateCar("2015-09-10") + "&drop_off=" + getReturnDate() + "&apikey=nRLZ1a7XwQyUiepJflPOx1djGdUo9bGf",
+			url: "http://api.sandbox.amadeus.com/v1.2/cars/search-airport?location=" + getDestination()[i] + "&pick_up=" + startDate + "&drop_off=" + returnDate + "&apikey=nRLZ1a7XwQyUiepJflPOx1djGdUo9bGf",
 			dataType: 'json',
 			}).done(function( data ){
 			// console.log(data);
@@ -129,16 +142,16 @@ $(document).ready(function () {
 				json.destination = data.results[1]["airport"];
 				
 				json.cost = data.results[1]["cars"][1]["estimated_total"]["amount"];
-				json.departureDate = getDepartureDateCar("2015-09-10")
-				json.returnDate = "2015-10-18"
+				json.departureDate = startDate;
+				json.returnDate = returnDate;
 
-				var dep = new Date(json.departureDate);
+				var dep = new Date(startDate);
 				var d = dep.toLocaleDateString();
 				console.log(d);
 
-				var ret = new Date(json.returnDate);
+				var ret = new Date(returnDate);
 				var r = ret.toLocaleDateString();
-				console.log(r);
+				// console.log(r);
 
 
 				var carCost = data.results[1]["cars"][1]["estimated_total"]["amount"];
@@ -147,9 +160,9 @@ $(document).ready(function () {
 				$("#carDest").html(carDest);
 				var carBrand = data.results[1]["provider"]["company_name"];
 				$("#carBrand").html(carBrand);
-				var carDeparture = getDepartureDateCar("2015-09-10");
+				var carDeparture = d; //getDepartureDateCar("2015-09-10");
 				$("#carDeparture").html(carDeparture);
-				var carReturn = "2015-10-18";
+				var carReturn = r; //"2015-10-18";
 				$("#carReturn").html(carReturn);
 
 				// console.log(json);
