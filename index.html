@@ -56,8 +56,8 @@
 				<form>
 					<div id="temp" class="sentence">
 						<p>I WANT TO GO SOMEWHERE</p>
-						<select>
-							 <option value="warm">Warm</option>
+						<select id="temperature">
+							 <option value="warm" selected="selected">Warm</option>
 							 <option value="cold">Cold</option>
 						</select>
 					</div>
@@ -109,7 +109,7 @@
 						<input tyle="text" value="0" required>
 					</div>
 
-					<input class="nextButton nextStyles" type="submit" value="">
+					<input class="nextButton nextStyles" id="formSubmit" type="submit" value="">
 				</form>
 
 			</article>
@@ -369,6 +369,11 @@
 
 		</footer>
 	</div>
+
+	<div class="overlay">
+
+	</div>
+
 <script type='text/javascript' src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type='text/javascript' src="assets/js/min/venture4th-script.js"></script>
 <script src="http://use.typekit.net/zoh2zrs.js"></script>
