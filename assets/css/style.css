@@ -3,9 +3,12 @@
 /* Variables */
 body {
   width: 100%;
-  background: #e7e8e9; }
+  background: #e7e8e9;
+  color: #283d3e;
+  position: relative; }
   body p {
-    font: 400 27px/27px Helvetica, san-serif; }
+    font: 400 27px/27px Helvetica, san-serif;
+    color: #283d3e; }
 
 /* Typography */
 #main_container h1 {
@@ -17,7 +20,7 @@ body {
   vertical-align: super;
   font-size: 25px; }
 #main_container h2 {
-  font: 400 40px/4em "tenso", sans-serif;
+  font: 400 40px/49px "tenso", sans-serif;
   color: #464646;
   text-transform: uppercase; }
 #main_container h2.white {
@@ -42,6 +45,7 @@ body {
   position: relative;
   margin-bottom: 30px;
   height: 120px;
+  z-index: 1000;
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.75) ;
   -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.75) ;
   -ms-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.75) ;
@@ -124,9 +128,10 @@ body {
 #main_container #third {
   position: relative;
   padding-bottom: 120px; }
-  #main_container #third .nextStyles {
+  #main_container #third .nextContainer {
     position: absolute;
-    bottom: 20px; }
+    bottom: 20px;
+    width: 100%; }
   #main_container #third .placeOptions li {
     display: block;
     width: 490px;
@@ -192,41 +197,165 @@ body {
           background: #283d3e; }
         #main_container #third .placeOptions li .cardButtons a.red {
           background: #d62d2e; }
-#main_container #fourth .price {
-  width: 135px;
-  height: 120px;
-  float: left;
-  text-align: center;
-  margin-right: 10px; }
-#main_container #fourth .packageOptions li {
-  height: 120px;
-  padding: 20px 5px 0 5px; }
-  #main_container #fourth .packageOptions li p.description {
-    width: 250px;
-    font: 400 20px/23px Helvetica, san-serif;
+#main_container #fourth {
+  position: relative; }
+  #main_container #fourth article {
+    margin: 10px 0; }
+  #main_container #fourth img {
+    top: -30px;
+    left: 0;
+    position: absolute; }
+  #main_container #fourth h2.redStyle {
     display: block;
-    float: left; }
-#main_container #fourth .packageOptions li:nth-child(odd) {
-  background: #ffffff; }
-#main_container #fourth .cardButtons {
-  width: 160px;
-  display: block;
-  float: right; }
-  #main_container #fourth .cardButtons a {
-    height: 34px;
+    position: absolute;
+    top: 250px;
+    left: 0;
+    background: #d62d2e;
+    padding: 5px 0;
+    text-align: center;
+    font: 400 36px "tenso", sans-serif;
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase; }
+  #main_container #fourth .price {
+    width: 135px;
+    height: 120px;
+    float: left;
+    text-align: center;
+    margin-right: 10px; }
+  #main_container #fourth .packageOptions {
+    margin-top: 255px; }
+    #main_container #fourth .packageOptions li {
+      height: 120px;
+      padding: 20px 5px 0 5px; }
+      #main_container #fourth .packageOptions li p.description {
+        width: 250px;
+        font: 400 20px/23px Helvetica, san-serif;
+        display: block;
+        float: left; }
+    #main_container #fourth .packageOptions li:nth-child(odd) {
+      background: #ffffff; }
+  #main_container #fourth .cardButtons {
+    width: 160px;
+    display: block;
+    float: right; }
+    #main_container #fourth .cardButtons a {
+      height: 34px;
+      width: 100%;
+      display: block;
+      font: 400 26px "tenso", sans-serif;
+      text-align: center;
+      padding: 5px 0;
+      clear: both;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none; }
+      #main_container #fourth .cardButtons a.green {
+        background: #283d3e; }
+      #main_container #fourth .cardButtons a.red {
+        background: #d62d2e; }
+#main_container #fifth {
+  position: relative; }
+  #main_container #fifth article {
+    margin: 0; }
+  #main_container #fifth img.banner {
+    top: -230px;
+    left: 0;
+    position: absolute;
+    z-index: 1; }
+  #main_container #fifth figure {
+    display: block;
+    float: left;
+    height: 160px;
+    width: 138px; }
+  #main_container #fifth img.detailsBanner {
+    margin-top: 100px; }
+  #main_container #fifth h2.redStyle {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #d62d2e;
+    padding: 5px 0;
+    text-align: center;
+    font: 400 36px "tenso", sans-serif;
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase; }
+  #main_container #fifth .packageDetails li {
+    height: 140px;
+    display: block;
+    min-height: 160px;
+    padding: 5px 0; }
+  #main_container #fifth .packageDetails li:nth-child(even) {
+    background: #ffffff; }
+  #main_container #fifth .packageDetails p.info {
+    font: 400 22px/27px Helvetica, san-serif; }
+  #main_container #fifth .packageDetails p.money {
+    color: #d62d2e;
+    font: 400 26px/26px "tenso", sans-serif;
+    display: inline-block; }
+  #main_container #fifth .detailsCon {
+    width: 480px;
+    display: block;
+    float: left;
+    margin-left: 20px;
+    position: relative;
+    height: 160px; }
+  #main_container #fifth .cardButtons {
     width: 100%;
     display: block;
-    font: 400 26px "tenso", sans-serif;
-    text-align: center;
-    padding: 5px 0;
-    clear: both;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none; }
-    #main_container #fourth .cardButtons a.green {
-      background: #283d3e; }
-    #main_container #fourth .cardButtons a.red {
-      background: #d62d2e; }
+    position: absolute;
+    bottom: 5px;
+    margin: 10px auto; }
+    #main_container #fifth .cardButtons a {
+      height: 34px;
+      width: 210px;
+      display: inline-block;
+      right: 20px;
+      bottom: 0;
+      position: absolute;
+      font: 400 26px "tenso", sans-serif;
+      text-align: center;
+      padding: 5px 0;
+      clear: both;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none; }
+      #main_container #fifth .cardButtons a.green {
+        background: #283d3e; }
+#main_container #sixth p {
+  line-height: 1.6em; }
+  #main_container #sixth p.offer {
+    font-size: 22px;
+    margin-left: 10px; }
+#main_container #sixth hr {
+  border-top: 2px solid #283d3e; }
+#main_container #sixth .finishButton {
+  height: 34px;
+  width: auto;
+  display: inline-block;
+  font: 400 26px "tenso", sans-serif;
+  text-align: center;
+  padding: 5px;
+  clear: both;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none; }
+  #main_container #sixth .finishButton.green {
+    background: #283d3e; }
+  #main_container #sixth .finishButton.red {
+    background: #d62d2e; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; }
 
 /* form elements */
 .onoffswitch {
