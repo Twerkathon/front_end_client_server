@@ -3,13 +3,14 @@
  * Copyright (c) 2014; * Licensed GPLv2+ */
 jQuery(document).ready(function($) {
 
-	$('section').hide();
+	$('section, .backButton').hide();
 
 	$('.current').show();
 
 	$('.nextButton').click(function() {
 	    $('.current').removeClass('current').hide()
 	        .next().fadeIn().addClass('current');
+	        $('.backButton').show();
 	    if ($('.current').hasClass('last')) {
 	        $('.nextButton').attr('disabled', true);
 	    }
@@ -20,6 +21,7 @@ jQuery(document).ready(function($) {
 	    $('.current').removeClass('current').hide()
 	        .prev().fadeIn().addClass('current');
 	    if ($('.current').hasClass('first')) {
+	    	$('.backButton').hide();
 	        $('.backButton').attr('disabled', true);
 	    }
 	    $('.nextButton').attr('disabled', null);
