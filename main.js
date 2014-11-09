@@ -23,7 +23,7 @@ $(document).ready(function () {
 		// var temp = $(#city).val();
 		
 
-		return ["LHR","MAD"]
+		// return ["LHR","MAD"]
 		
 		// destination logic
 		// return ["LAX","NCE","FPO"];
