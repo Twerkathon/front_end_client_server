@@ -37,4 +37,8 @@ jQuery(document).ready(function($) {
 	    $('.placeOptions li').removeClass('selected');
 	    $(this).addClass('selected');
 	});
+
+	$('.finishButton').click(function() {
+		$('.overlay').fadeIn();
+	});
 });
