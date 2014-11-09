@@ -112,6 +112,12 @@ $(document).ready(function () {
 				$("#flightDeparture").html(flightDeparture);
 				var flightReturn = r; //data.results[0]["return_date"];
 				$("#flightReturn").html(flightReturn);
+				var returnFlight = d; // data.results[0]["departure_date"];
+				$("#returnFlightDep").html(returnFlightDep);
+				var  returnFlightRet= r; //data.results[0]["return_date"];
+				$("#returnFlightRet").html(returnFlightRet);
+
+
 
 
 				// console.log(json);
@@ -172,7 +178,8 @@ $(document).ready(function () {
 
 		recommendations.push(carRentals);	
 	};
-		
+		var  returnFlightRet= r; //data.results[0]["return_date"];
+		$("#returnFlightRet").html(returnFlightRet);
 		// var carCost = recommendations[1].cost;
 		// console.log(recommendations[1]);
 		// document.getElementById("carCost").innerHTML(carCost);
